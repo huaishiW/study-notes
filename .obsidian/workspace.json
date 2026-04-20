@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ELF/AI提取的Understanding_ELF.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI提取的Understanding_ELF"
+              "title": "README"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 397.5
   },
   "right": {
     "id": "ce4c4849ddf82b33",
@@ -87,15 +87,30 @@
       {
         "id": "d348e6c4fed8c013",
         "type": "tabs",
-        "dimension": 74.50980392156863,
+        "dimension": 73.23529411764706,
         "children": [
+          {
+            "id": "d6b9b66e376bb379",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "README 的大纲"
+            }
+          },
           {
             "id": "95de62687858b606",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git的使用/git常用命令.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "git常用命令 的反向链接列表"
+              "title": "README 的反向链接列表"
             }
           },
           {
@@ -114,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据库原理/2.关系数据库.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "2.关系数据库 的出链列表"
+              "title": "README 的出链列表"
             }
           },
           {
@@ -150,29 +165,13 @@
               "icon": "lucide-archive",
               "title": "添加笔记属性"
             }
-          },
-          {
-            "id": "d6b9b66e376bb379",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "ELF/AI提取的Understanding_ELF.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "AI提取的Understanding_ELF 的大纲"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
-        "id": "a9610f3dd25f90d3",
+        "id": "2581d10ce9705011",
         "type": "tabs",
-        "dimension": 25.49019607843137,
+        "dimension": 26.764705882352942,
         "children": [
           {
             "id": "64eca153fc4fc9b9",
@@ -188,7 +187,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 346.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,57 +199,58 @@
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "workspaces:管理工作区布局": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "4859d045d0a9e95a",
   "lastOpenFiles": [
-    "binutils-toolchain-complete-guide.md",
-    "ELF/Understanding_ELF.pdf",
-    "ELF/AI提取的Understanding_ELF.md",
     "ELF/搞懂ELF从入门到遗忘.md",
-    "ELF/ELF注入技术辅助知识.md",
+    "README.md",
+    "ELF/AI提取的Understanding_ELF.md",
+    "ELF/概念补充及联想.md",
+    "数据库原理/4.关系数据理论.md",
+    "数据库原理/3.关系数据库标准语言SQL.md",
+    "数据库原理/2.关系数据库.md",
+    "数据库原理/1.绪论.md",
+    "操作系统/3.处理机调度与死锁.md",
+    "操作系统/4.存储器管理.md",
+    "操作系统/2.进程的描述与控制.md",
+    "操作系统/1.引论.md",
+    "操作系统/概念拓展与补充.md",
+    "fix_spaces.py",
+    "ELF/binutils-toolchain-complete-guide.md",
+    "convert_all.py",
+    "convert_highlights.py",
+    "数据库原理/数据库系统的三级模式结构.canvas",
     "ELF/ELF文件注入技术方式方法.md",
+    "fix_spaces.py.tmp.13376.1776691519338",
+    "convert_obsidian_to_markdown.py",
+    "Obsidian-Git使用指南.md",
+    "binutils-toolchain-complete-guide.md",
+    "ELF/attachments/Pasted image 20260419133516.png",
+    "ELF/attachments/Pasted image 20260419133807.png",
+    "ELF/attachments/Pasted image 260419133845.png.md",
+    "ELF/attachments/Pasted image 20260419133845.png",
+    "ELF/attachments/Pasted image 20260419145229.png",
+    "ELF/attachments/Pasted image 260419133807.png.md",
     "ELF/ELF文件格式详解-ai.md",
+    "ELF/ELF程序头部与进程内存管理详解.md",
+    "动手写链接器myld.md",
+    "LICENSE",
+    "ELF/Understanding_ELF.pdf",
+    "ELF/ELF注入技术辅助知识.md",
     "ELF/ELF文件类型与PIE详解.md",
     "ELF/Understanding_ELF.md",
     "微信小程序开发学习清单.md",
-    "ELF/ELF程序头部与进程内存管理详解.md",
-    "操作系统/2.进程的描述与控制.md",
-    "ELF/概念补充及联想.md",
-    "ELF/attachments/Pasted image 20260419145229.png",
-    "未命名.md",
     "ELF/attachments/Pasted image 20260419135058.png",
     "ELF/attachments/Pasted image 20260419134949.png",
     "ELF/attachments/Pasted image 20260419134818.png",
     "ELF/attachments/Pasted image 20260419134536.png",
     "ELF/attachments/Pasted image 20260419134516.png",
     "ELF/attachments/Pasted image 20260419134344.png",
-    "ELF/attachments/Pasted image 20260419134316.png",
-    "ELF/attachments/Pasted image 20260419134230.png",
-    "ELF/attachments/Pasted image 20260419134026.png",
     "ELF/attachments",
     "未命名",
-    "dive-into-llms/documents/chapter2/README.md",
-    "ELF",
-    "新建文件夹",
-    "dive-into-llms/documents/chapter1/dive-into-llm.pdf",
-    "dive-into-llms/documents/chapter1/README.md",
-    "实用的网站.md",
-    "STCC内部网站大概设计.md",
-    "操作系统/3.处理机调度与死锁.md",
-    "第三章 处理机调度与死锁.md",
-    "ppt_content_clean.txt",
-    "ppt_unicode.txt",
-    "~$3-OS-课件-第三章 处理机调度与死锁.pptx",
-    "ppt_content_raw.txt",
-    "第02章 进程描述与控制-2.5.2哲学家进餐问题之后 总结.md",
-    "操作系统/1.引论.md",
-    "数据库原理/3.关系数据库标准语言SQL.md",
-    "数据库原理/2.关系数据库.md",
-    "第02章  关系数据库 总结.md",
-    "数据库原理/1.绪论.md",
-    "Windows用户目录文件夹详解.md",
-    "数据库原理/数据库系统的三级模式结构.canvas"
+    "ELF"
   ]
 }

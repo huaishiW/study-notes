@@ -429,7 +429,7 @@ e8, cc, ff, ff, ff, ; call rel32(-52)  → 跳回 pop rsi 的下一条指令
 ```c
 // wrapper.c 第194-199行
 for (int i = 0; i < phnum; i++) {
-    if (phdr[i].p_type == PT_LOAD && phdr[i].p_vaddr == target_vaddr) {
+    if (phdr[i].p_type <mark> PT_LOAD && phdr[i].p_vaddr </mark> target_vaddr) {
         phdr[i].p_filesz += SHELLCODE_SIZE;   // 文件大小也要扩展
         phdr[i].p_memsz  += SHELLCODE_SIZE;    // 内存大小也要扩展
         break;
