@@ -1,0 +1,256 @@
+{
+  "main": {
+    "id": "cc532c24b6882d58",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b7732eaa847ea15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4859d045d0a9e95a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ELF/AI提取的Understanding_ELF.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI提取的Understanding_ELF"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f25fd8617071d878",
+    "type": "split",
+    "children": [
+      {
+        "id": "538569b4ab4b8f13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c23df7bd5db871f0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "af8a7abf9c83b2da",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "9e1d377f30a16a04",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 289.5
+  },
+  "right": {
+    "id": "ce4c4849ddf82b33",
+    "type": "split",
+    "children": [
+      {
+        "id": "d348e6c4fed8c013",
+        "type": "tabs",
+        "dimension": 74.50980392156863,
+        "children": [
+          {
+            "id": "95de62687858b606",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "git的使用/git常用命令.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "git常用命令 的反向链接列表"
+            }
+          },
+          {
+            "id": "0c4275286d11570a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "数据库原理/2.关系数据库.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2.关系数据库 的出链列表"
+            }
+          },
+          {
+            "id": "ca2be36043ac7a1f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "b8802e82c692acac",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "d6b9b66e376bb379",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ELF/AI提取的Understanding_ELF.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "AI提取的Understanding_ELF 的大纲"
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "a9610f3dd25f90d3",
+        "type": "tabs",
+        "dimension": 25.49019607843137,
+        "children": [
+          {
+            "id": "64eca153fc4fc9b9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 326.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "workspaces:管理工作区布局": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "4859d045d0a9e95a",
+  "lastOpenFiles": [
+    "binutils-toolchain-complete-guide.md",
+    "ELF/Understanding_ELF.pdf",
+    "ELF/AI提取的Understanding_ELF.md",
+    "ELF/搞懂ELF从入门到遗忘.md",
+    "ELF/ELF注入技术辅助知识.md",
+    "ELF/ELF文件注入技术方式方法.md",
+    "ELF/ELF文件格式详解-ai.md",
+    "ELF/ELF文件类型与PIE详解.md",
+    "ELF/Understanding_ELF.md",
+    "微信小程序开发学习清单.md",
+    "ELF/ELF程序头部与进程内存管理详解.md",
+    "操作系统/2.进程的描述与控制.md",
+    "ELF/概念补充及联想.md",
+    "ELF/attachments/Pasted image 20260419145229.png",
+    "未命名.md",
+    "ELF/attachments/Pasted image 20260419135058.png",
+    "ELF/attachments/Pasted image 20260419134949.png",
+    "ELF/attachments/Pasted image 20260419134818.png",
+    "ELF/attachments/Pasted image 20260419134536.png",
+    "ELF/attachments/Pasted image 20260419134516.png",
+    "ELF/attachments/Pasted image 20260419134344.png",
+    "ELF/attachments/Pasted image 20260419134316.png",
+    "ELF/attachments/Pasted image 20260419134230.png",
+    "ELF/attachments/Pasted image 20260419134026.png",
+    "ELF/attachments",
+    "未命名",
+    "dive-into-llms/documents/chapter2/README.md",
+    "ELF",
+    "新建文件夹",
+    "dive-into-llms/documents/chapter1/dive-into-llm.pdf",
+    "dive-into-llms/documents/chapter1/README.md",
+    "实用的网站.md",
+    "STCC内部网站大概设计.md",
+    "操作系统/3.处理机调度与死锁.md",
+    "第三章 处理机调度与死锁.md",
+    "ppt_content_clean.txt",
+    "ppt_unicode.txt",
+    "~$3-OS-课件-第三章 处理机调度与死锁.pptx",
+    "ppt_content_raw.txt",
+    "第02章 进程描述与控制-2.5.2哲学家进餐问题之后 总结.md",
+    "操作系统/1.引论.md",
+    "数据库原理/3.关系数据库标准语言SQL.md",
+    "数据库原理/2.关系数据库.md",
+    "第02章  关系数据库 总结.md",
+    "数据库原理/1.绪论.md",
+    "Windows用户目录文件夹详解.md",
+    "数据库原理/数据库系统的三级模式结构.canvas"
+  ]
+}

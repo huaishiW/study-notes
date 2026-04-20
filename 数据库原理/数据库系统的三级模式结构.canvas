@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"6c5aa9f3052aaac7","type":"text","text":"应用A","x":-280,"y":-420,"width":100,"height":50},
+		{"id":"bf313ab77b69d246","type":"text","text":"应用A","x":160,"y":-420,"width":105,"height":50},
+		{"id":"8c9f9ff9fcd1c7ec","type":"text","text":"应用A","x":-60,"y":-420,"width":100,"height":50},
+		{"id":"829c6f7c7ed66489","type":"text","text":"外模式3","x":160,"y":-310,"width":105,"height":60},
+		{"id":"42c261b376d98143","type":"text","text":"外模式2","x":-62,"y":-310,"width":105,"height":60},
+		{"id":"144fa94bfc274086","type":"text","text":"[[1.绪论#（4）外模式/模式映像 | 外模式/模式映像]]","x":-460,"y":-200,"width":180,"height":60},
+		{"id":"123ce8e49ac8fb1b","type":"text","text":"[[1.绪论#逻辑模式：|模式]]","x":-52,"y":-120,"width":85,"height":60},
+		{"id":"5799cf56f26ead0f","type":"text","text":"[[1.绪论#（5）模式/内模式映像 | 模式/内模式映像]]","x":-460,"y":-40,"width":180,"height":60},
+		{"id":"76e1a7be3517b248","type":"text","text":"数据库","x":-57,"y":160,"width":95,"height":50},
+		{"id":"b80b3c8da07c1fc3","type":"text","text":"[[1.绪论#（3）内模式（存储模式）|内模式]]","x":-67,"y":60,"width":114,"height":60},
+		{"id":"de4c69d74f2aa0ef","type":"text","text":"[[1.绪论#（2）外模式（子模式、用户模式）| 外模式1]]","x":-290,"y":-310,"width":120,"height":60}
+	],
+	"edges":[
+		{"id":"07ad984e75b05b46","fromNode":"6c5aa9f3052aaac7","fromSide":"bottom","toNode":"de4c69d74f2aa0ef","toSide":"top","fromEnd":"arrow"},
+		{"id":"7d644538137d3ded","fromNode":"8c9f9ff9fcd1c7ec","fromSide":"bottom","toNode":"42c261b376d98143","toSide":"top","fromEnd":"arrow"},
+		{"id":"156f53c507e3dbcb","fromNode":"bf313ab77b69d246","fromSide":"bottom","toNode":"829c6f7c7ed66489","toSide":"top","fromEnd":"arrow"},
+		{"id":"7835c117779f5802","fromNode":"de4c69d74f2aa0ef","fromSide":"bottom","toNode":"123ce8e49ac8fb1b","toSide":"left"},
+		{"id":"cc113a5a6514baba","fromNode":"42c261b376d98143","fromSide":"bottom","toNode":"123ce8e49ac8fb1b","toSide":"top"},
+		{"id":"132d9d4a9d2c0805","fromNode":"829c6f7c7ed66489","fromSide":"bottom","toNode":"123ce8e49ac8fb1b","toSide":"right"},
+		{"id":"a550a0631342d4ab","fromNode":"123ce8e49ac8fb1b","fromSide":"bottom","toNode":"b80b3c8da07c1fc3","toSide":"top"},
+		{"id":"83155a0ca76bbaef","fromNode":"b80b3c8da07c1fc3","fromSide":"bottom","toNode":"76e1a7be3517b248","toSide":"top"}
+	]
+}

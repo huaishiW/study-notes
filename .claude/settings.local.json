@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where claude:*)",
+      "Bash(npm list:*)",
+      "Bash(D:/nodejsnpm/node_global/claude:*)",
+      "Bash(claude --version)",
+      "Skill(tavily:tavily-research)",
+      "WebSearch",
+      "mcp__tavily__tavily_search",
+      "Skill(update-config)",
+      "mcp__tavily__tavily_research",
+      "WebFetch(domain:github.com)",
+      "mcp__tavily__tavily_extract"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "promptDelete": false,
+  "showInlineTitle": true,
+  "attachmentFolderPath": "./attachments",
+  "showLineNumber": false,
+  "spellcheck": false,
+  "smartIndentList": false,
+  "defaultViewMode": "source"
+}
