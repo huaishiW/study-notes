@@ -10,6 +10,16 @@
 - Section 与 Segment 的区别
 - PIE 与 ASLR 安全机制
 - ELF 注入技术原理
+- 动态链接与 PIC 原理
+- System V AMD64 ABI 调用约定
+- Binutils 工具链完全指南
+
+### Bochs 模拟器
+- Bochs 模拟器详细介绍
+
+### QEMU
+- QEMU User 模式深入研究
+- 二进制翻译原理与架构解析
 
 ### 操作系统
 系统学习操作系统核心概念：
