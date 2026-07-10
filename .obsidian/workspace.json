@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2b7732eaa847ea15",
+        "id": "73822ce7b1cd3f11",
         "type": "tabs",
         "children": [
           {
-            "id": "4859d045d0a9e95a",
+            "id": "a304673805cccf9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "实用的网站.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "实用的网站"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5
+    "width": 273.5
   },
   "right": {
     "id": "ce4c4849ddf82b33",
@@ -95,13 +95,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "实用的网站.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "实用的网站 的大纲"
             }
           },
           {
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "数据库原理/5.数据库恢复技术.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "README 的反向链接列表"
+              "title": "5.数据库恢复技术 的反向链接列表"
             }
           },
           {
@@ -129,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "ELF/ELF文件格式详解-ai.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "README 的出链列表"
+              "title": "ELF文件格式详解-ai 的出链列表"
             }
           },
           {
@@ -199,58 +199,57 @@
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "workspaces:管理工作区布局": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-git:Open Git source control": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4859d045d0a9e95a",
+  "active": "a304673805cccf9c",
   "lastOpenFiles": [
-    "ELF/搞懂ELF从入门到遗忘.md",
-    "README.md",
-    "ELF/AI提取的Understanding_ELF.md",
-    "ELF/概念补充及联想.md",
-    "数据库原理/4.关系数据理论.md",
-    "数据库原理/3.关系数据库标准语言SQL.md",
     "数据库原理/2.关系数据库.md",
-    "数据库原理/1.绪论.md",
+    "数据库原理/4.关系查询处理和查询优化.md",
+    "数据库原理/7.关系数据理论.md",
+    "数据库原理/数据库原理知识库.md",
+    "操作系统/操作系统基础知识库.md",
+    "数据库原理/数据库系统的三级模式结构.canvas",
+    "实用的网站.md",
+    "后端/mysql/3.关系数据库标准语言SQL(MySQL).md",
+    "微信小程序开发学习清单.md",
+    "README.md",
+    "操作系统/6.输入输出系统.md",
+    "操作系统/7.文件管理.md",
+    "操作系统/1.引论.md",
+    "操作系统/8.磁盘存储器管理.md",
+    "操作系统/9.操作系统接口.md",
+    "操作系统/2.进程的描述与控制.md",
     "操作系统/3.处理机调度与死锁.md",
     "操作系统/4.存储器管理.md",
-    "操作系统/2.进程的描述与控制.md",
-    "操作系统/1.引论.md",
+    "操作系统/5.虚拟存储器.md",
+    "数据库原理/6.并发控制.md",
+    "数据库原理/5.数据库恢复技术.md",
+    "数据库原理/8.数据库设计.md",
+    "数据库原理/attachments/5.数据库恢复技术-20260709122055.png",
+    "数据库原理/attachments/4.关系查询处理和查询优化-20260703232659.png",
+    "数据库原理/3.关系数据库标准语言SQL.md",
+    "数据库原理/3.关系数据库标准语言SQL(MySQL).md",
+    "未命名.canvas",
+    "数据库原理/1.绪论.md",
+    "操作系统/attachments/Pasted image 20260418193022.png",
     "操作系统/概念拓展与补充.md",
-    "fix_spaces.py",
-    "ELF/binutils-toolchain-complete-guide.md",
-    "convert_all.py",
-    "convert_highlights.py",
-    "数据库原理/数据库系统的三级模式结构.canvas",
-    "ELF/ELF文件注入技术方式方法.md",
-    "fix_spaces.py.tmp.13376.1776691519338",
-    "convert_obsidian_to_markdown.py",
-    "Obsidian-Git使用指南.md",
-    "binutils-toolchain-complete-guide.md",
-    "ELF/attachments/Pasted image 20260419133516.png",
-    "ELF/attachments/Pasted image 20260419133807.png",
-    "ELF/attachments/Pasted image 260419133845.png.md",
-    "ELF/attachments/Pasted image 20260419133845.png",
-    "ELF/attachments/Pasted image 20260419145229.png",
-    "ELF/attachments/Pasted image 260419133807.png.md",
-    "ELF/ELF文件格式详解-ai.md",
-    "ELF/ELF程序头部与进程内存管理详解.md",
-    "动手写链接器myld.md",
-    "LICENSE",
-    "ELF/Understanding_ELF.pdf",
-    "ELF/ELF注入技术辅助知识.md",
-    "ELF/ELF文件类型与PIE详解.md",
-    "ELF/Understanding_ELF.md",
-    "微信小程序开发学习清单.md",
-    "ELF/attachments/Pasted image 20260419135058.png",
-    "ELF/attachments/Pasted image 20260419134949.png",
-    "ELF/attachments/Pasted image 20260419134818.png",
-    "ELF/attachments/Pasted image 20260419134536.png",
-    "ELF/attachments/Pasted image 20260419134516.png",
-    "ELF/attachments/Pasted image 20260419134344.png",
-    "ELF/attachments",
-    "未命名",
-    "ELF"
+    "操作系统/attachments/8.磁盘存储器管理-20260620171819.png",
+    "操作系统/attachments/8.磁盘存储器管理-20260620170341.png",
+    "操作系统/attachments/7.文件管理-20260619211915.png",
+    "操作系统/attachments/7.文件管理-20260619211431.png",
+    "操作系统/attachments/7.文件管理-20260619211306.png",
+    "操作系统/attachments/7.文件管理-20260619205651.png",
+    "操作系统/attachments/7.文件管理-20260619205156.png",
+    "11.2_图算法篇-单源最短路径之Bellman-Ford算法.md.tmp.5220.1310c579dd77",
+    "11.1_图算法篇-单源最短路径_Dijkstra.md.tmp.5220.08b0623e2256",
+    "10.2_图算法篇-最小生成树之Kruskal算法.md.tmp.5220.71e1828d9715",
+    "10.1_图算法篇-最小生成树-prim.md.tmp.5220.d5ed7d433f85",
+    "9.4_图算法篇-强连通分量.md.tmp.5220.55b15e9040bd",
+    "9.3_图算法篇-拓扑排序.md.tmp.5220.3bac1b67d24b",
+    "9.2_图算法篇-有向图中环路的存在性判断.md.tmp.5220.17c5af874ee5",
+    "9.1_图算法篇-有向图的深度优先搜索.md.tmp.5220.de9d14cf7c32",
+    "8.3_图算法篇-深度优先搜索.md.tmp.5220.75b335d67935",
+    "8.2_图算法篇-广度优先搜索.md.tmp.5220.f07df5fa530f"
   ]
 }

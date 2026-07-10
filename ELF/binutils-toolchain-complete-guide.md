@@ -373,22 +373,6 @@ readelf -c a.out              # 显示 .comment 段
 readelf --debug-dump=decodedline a.out  # 显示 DWARF 调试信息
 ```
 
-#### ELF 文件结构
-
-```
-+-------------------+
-| ELF Header        |  (固定位置，包含魔数、类型、入口点等)
-+-------------------+
-| Program Headers   |  (段信息，加载器使用)
-+-------------------+
-| Section 1         |  (.text, .data, .bss 等)
-| Section 2         |
-| ...               |
-+-------------------+
-| Section Headers   |  (描述各节的元数据)
-+-------------------+
-```
-
 #### 与 objdump 的区别
 
 | 特性 | objdump | readelf |

@@ -109,17 +109,19 @@ ELF (Executable and Linkable Format) 是一种通用的二进制文件格式标�
 +-------------------+
 ```
 
+[[搞懂ELF从入门到遗忘#2.2 ELF 文件结构概览]]
+
 ### 2.2 文件类型
 
 ELF文件有三种类型，由ELF头的 `e_type` 字段标识：
 
-| 类型值 | 名称 | 描述 |
-|--------|------|------|
-| ET_NONE | 0 | 未知类型 |
-| ET_REL  | 1 | 可重定位文件 (Relocatable file) - 目标文件 |
-| ET_EXEC | 2 | 可执行文件 (Executable file) |
-| ET_DYN  | 3 | 共享对象文件 (Shared object file) - 动态库 |
-| ET_CORE | 4 | 核心转储文件 (Core dump file) |
+| 类型值     | 名称  | 描述                                |
+| ------- | --- | --------------------------------- |
+| ET_NONE | 0   | 未知类型                              |
+| ET_REL  | 1   | 可重定位文件 (Relocatable file) - 目标文件  |
+| ET_EXEC | 2   | 可执行文件 (Executable file)           |
+| ET_DYN  | 3   | 共享对象文件 (Shared object file) - 动态库 |
+| ET_CORE | 4   | 核心转储文件 (Core dump file)           |
 
 ### 2.3 数据编码
 
@@ -169,12 +171,12 @@ ELF同时存在32位和64位两种版本，结构略有不同。
 typedef struct {
     unsigned char e_ident[EI_NIDENT]; /* 魔数和其他信息 */
     Elf64_Half    e_type;            /* 文件类型 */
-    Elf64_Half    e_machine;         /* 目标架构 */
+    Elf64_Half    e_machine;         /* 目标架构-处理器架构 */
     Elf64_Word    e_version;         /* 文件版本 */
     Elf64_Addr    e_entry;           /* 程序入口点虚拟地址 */
     Elf64_Off     e_phoff;           /* 程序头部表偏移 */
     Elf64_Off     e_shoff;           /* 节区头部表偏移 */
-    Elf64_Word    e_flags;           /* 处理器特定标志 */
+    Elf64_Word    e_flags;           /* 处理器特定标志（某些处理器使用） */
     Elf64_Half    e_ehsize;          /* ELF头大小 */
     Elf64_Half    e_phentsize;       /* 程序头部表项大小 */
     Elf64_Half    e_phnum;           /* 程序头部表项数量 */
@@ -230,6 +232,8 @@ ELF Header:
   Number of section headers:         31
   Section header string table index: 28
 ```
+
+[[搞懂ELF从入门到遗忘#3.1.1 文件头（File Header）]]
 
 ---
 
@@ -290,26 +294,8 @@ p_filesz < p_memsz: .bss节区额外内存为零
 p_filesz == p_memsz: 没有.bss节区
 ```
 
-### 4.6 查看程序头部
-
-```bash
-$ readelf -l /bin/ls
-
-Elf file type is DYN (Shared object file)
-Entry point 0x0
-There are 13 program headers, starting at offset 64
-
-Program Headers:
-  Type           Offset   VirtAddr           PhysAddr           FileSiz  MemSiz   Flg Align
-  LOAD           0x000000 0x0000000000000000 0x0000000000000000 0x13a868 0x13a868 R E 0x200000
-  LOAD           0x13b000 0x000000000013b000 0x000000000013b000 0x023a70 0x02e4e0 RW  0x200000
-  DYNAMIC        0x15eb48 0x000000000015eb48 0x000000000015eb48 0x0001f0 0x0001f0 RW  0x8
-  NOTE           0x000268 0x0000000000000268 0x0000000000000268 0x000020 0x000020 R   0x8
-  NOTE           0x000288 0x0000000000000288 0x0000000000000288 0x000024 0x000024 R   0x4
-  GNU_EH_FRAME   0x13a7ec 0x000000000013a7ec 0x000000000013a7ec 0x000574 0x000574 R   0x4
-  GNU_STACK       0x000000 0x0000000000000000 0x0000000000000000 0x000000 0x000000 RW  0x10
-  GNU_RELRO      0x13b000 0x000000000013b000 0x000000000013b000 0x023a70 0x023a70 R   0x1
-```
+[[ELF程序头部与进程内存管理详解#2.1 p_filesz 与 p_memsz 的差异]]
+[[搞懂ELF从入门到遗忘#3.1.2 程序头表（Program Header Table）]]
 
 ---
 
@@ -338,34 +324,34 @@ typedef struct {
 
 ### 5.3 节区类型 (sh_type)
 
-| 类型值 | 名称 | 描述 |
-|--------|------|------|
-| SHT_NULL | 0 | 未使用 |
-| SHT_PROGBITS | 1 | 程序定义信息 |
-| SHT_SYMTAB | 2 | 符号表 |
-| SHT_STRTAB | 3 | 字符串表 |
-| SHT_RELA | 4 | 重定位表 (带加数) |
-| SHT_HASH | 5 | 符号哈希表 |
-| SHT_DYNAMIC | 6 | 动态链接信息 |
-| SHT_NOTE | 7 | 注释信息 |
-| SHT_NOBITS | 8 | 不占用文件空间的节区 (.bss) |
-| SHT_REL | 9 | 重定位表 (不带加数) |
-| SHT_SHLIB | 10 | 保留 |
-| SHT_DYNSYM | 11 | 动态链接符号表 |
-| SHT_INIT_ARRAY | 14 | 初始化函数数组 |
-| SHT_FINI_ARRAY | 15 | 结束函数数组 |
-| SHT_PREINIT_ARRAY | 16 | 预初始化函数数组 |
-| SHT_GROUP | 17 | 节区组 |
-| SHT_SYMTAB_SHNDX | 18 | 扩展节区索引 |
-| SHT_RELR | 19 | RELR相对重定位表 (ELF 4.3) |
-| SHT_ANDROID_REL | 0x60000000 | Android REL (已废弃) |
-| SHT_ANDROID_RELA | 0x60000001 | Android RELA (已废弃) |
-| SHT_LLVM_ODRTAB | 0x6fff4c00 | LLVM ODRTAB |
-| SHT_GNU_ATTRIBUTES | 0x6ffffff5 | GNU属性 |
-| SHT_GNU_HASH | 0x6ffffff6 | GNU风格哈希表 |
-| SHT_GNU_LIBLIST | 0x6ffffff7 | 库列表 |
-| SHT_GNU_verdef | 0x6ffffffd | 版本定义 |
-| SHT_GNU_verneed | 0x6ffffffe | 版本需求 |
+| 类型值                | 名称         | 描述                   |
+| ------------------ | ---------- | -------------------- |
+| SHT_NULL           | 0          | 未使用                  |
+| SHT_PROGBITS       | 1          | 程序定义信息               |
+| SHT_SYMTAB         | 2          | 符号表                  |
+| SHT_STRTAB         | 3          | 字符串表                 |
+| SHT_RELA           | 4          | 重定位表 (带加数)           |
+| SHT_HASH           | 5          | 符号哈希表                |
+| SHT_DYNAMIC        | 6          | 动态链接信息               |
+| SHT_NOTE           | 7          | 注释信息                 |
+| SHT_NOBITS         | 8          | 不占用文件空间的节区 (.bss)    |
+| SHT_REL            | 9          | 重定位表 (不带加数)          |
+| SHT_SHLIB          | 10         | 保留                   |
+| SHT_DYNSYM         | 11         | 动态链接符号表              |
+| SHT_INIT_ARRAY     | 14         | 初始化函数数组              |
+| SHT_FINI_ARRAY     | 15         | 结束函数数组               |
+| SHT_PREINIT_ARRAY  | 16         | 预初始化函数数组             |
+| SHT_GROUP          | 17         | 节区组                  |
+| SHT_SYMTAB_SHNDX   | 18         | 扩展节区索引               |
+| SHT_RELR           | 19         | RELR相对重定位表 (ELF 4.3) |
+| SHT_ANDROID_REL    | 0x60000000 | Android REL (已废弃)    |
+| SHT_ANDROID_RELA   | 0x60000001 | Android RELA (已废弃)   |
+| SHT_LLVM_ODRTAB    | 0x6fff4c00 | LLVM ODRTAB          |
+| SHT_GNU_ATTRIBUTES | 0x6ffffff5 | GNU属性                |
+| SHT_GNU_HASH       | 0x6ffffff6 | GNU风格哈希表             |
+| SHT_GNU_LIBLIST    | 0x6ffffff7 | 库列表                  |
+| SHT_GNU_verdef     | 0x6ffffffd | 版本定义                 |
+| SHT_GNU_verneed    | 0x6ffffffe | 版本需求                 |
 
 ### 5.3.1 紧凑节区头表 (Compact Section Header Table)
 
@@ -387,64 +373,29 @@ ELF 4.3规范引入了紧凑节区头表格式，旨在减少大型二进制文�
 
 ### 5.4 节区标志 (sh_flags)
 
-| 标志值 | 名称 | 描述 |
-|--------|------|------|
-| SHF_WRITE | 1 | 可写 |
-| SHF_ALLOC | 2 | 占用内存 |
-| SHF_EXECINSTR | 4 | 可执行指令 |
-| SHF_MERGE | 16 | 可合并 |
-| SHF_STRINGS | 32 | 包含字符串 |
-| SHF_INFO_LINK | 64 | sh_info包含索引 |
-| SHF_LINK_ORDER | 128 | 维持链接顺序 |
-| SHF_OS_NONCONFORMING | 256 | OS特定 |
-| SHF_GROUP | 512 | 节区组成员 |
-| SHF_TLS | 1024 | 线程局部存储 |
-| SHF_COMPRESSED | 0x800 | 压缩节区 |
+| 标志值                  | 标志值(十进制)   | 描述                  |
+| -------------------- | ---------- | ------------------- |
+| SHF_WRITE            | 1          | 节区包含可写数据            |
+| SHF_ALLOC            | 2          | 节区在进程运行时占用内存        |
+| SHF_EXECINSTR        | 4          | 节区包含可执行指令           |
+| SHF_MERGE            | 16         | 节区数据可合并（相同内容去重）     |
+| SHF_STRINGS          | 32         | 节区数据包含以 null 结尾的字符串 |
+| SHF_INFO_LINK        | 64         | sh_info 包含节头表索引     |
+| SHF_LINK_ORDER       | 128        | 维持与另一节区的链接顺序        |
+| SHF_OS_NONCONFORMING | 256        | 需要 OS 特定处理          |
+| SHF_GROUP            | 512        | 节区是节区组的一部分          |
+| SHF_TLS              | 1024       | 节区包含线程局部存储          |
+| SHF_COMPRESSED       | 2048       | 节区数据已压缩             |
+| SHF_MASKOS           | 267386880  | OS 特定标志掩码           |
+| SHF_MASKPROC         | 4026531840 | 处理器特定标志掩码           |
 
-### 5.5 查看节区头部
-
-```bash
-$ readelf -S /bin/ls
-There are 31 section headers, starting at offset 0x34b8:
-
-Section Headers:
-  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al
-  [ 0]                   NULL            0000000000000000 000000 000000 00     0   0  0
-  [ 1] .note.gnu.build-id NOTE            0000000000000270 000270 000024 00   A  0   0  4
-  [ 2] .gnu.hash         GNU_HASH        0000000000000298 000298 00347c 00   A  3   0  8
-  [ 3] .dynsym           DYNSYM          0000000000003618 003618 0011a8 18   A  4   1  8
-  [ 4] .dynstr           STRTAB          00000000000047c0 0047c0 00e206 00   A  0   0  1
-  [ 5] .gnu.version      VERSYM          0000000000125a 00  5   a2   02   A  3   0  2
-  [ 6] .gnu.version_r    VERNEED          000000000012b0 006b0 0000d0 00   A  4   2  8
-  [ 7] .rela.dyn          RELA            000000000012880 006880 003a98 18   A  3   0  8
-  [ 8] .rela.plt          RELA            000000000016318 006318 003618 18   A  3  13  8
-  [ 9] .init             PROGBITS        000000000001900 01900 000017 00  AX  0   0  4
-  [10] .plt              PROGBITS        000000000001920 01920 000250 00  AX  0   0 16
-  [11] .text             PROGBITS        000000000001c80 001c80 00b942 00  AX  0   0 16
-  [12] .fini             PROGBITS        00000000000d4d0 00d4d0 00000d 00  AX  0   0  4
-  [13] .rodata           PROGBITS        00000000000d500 00d500 02a400 00   A  0   0 32
-  [14] .data             PROGBITS        000000000013b000 13b000 01a00 00  WA  0   0  8
-  [15] .bss              NOBITS          000000000013ca00 13ca00 01c000 00  WA  0   0  8
-  [16] .tdata            PROGBITS        000000000013ca00 13ca00 000010 00  WAT  0   0  1
-  [17] .tbss             NOBITS          000000000013ca10 13ca10 000008 00 WAT  0   0  1
-  [18] .got.plt          PROGBITS        000000000013f000 13f000 000400 08  WA  0   0  8
-  [19] .data.rel.ro      PROGBITS        000000000014a000 14a000 00e000 00  WA  0   0 32
-  [20] .dynamic          DYNAMIC         000000000015eb48 15eb48 0001f0 10  WA  3   0  8
-  [21] .got              PROGBITS        000000000015ed40 15ed40 0000c0 08  WA  0   0  8
-  [22] .symtab           SYMTAB          000000000016010 16010 00a8d8 24  23  25  8
-  [23] .strtab           STRTAB          0000000000208e8 208e8 00afb4 00      0   0  1
-  [24] .shstrtab         STRTAB          00000000002189c 2189c 0011c8 00      0   0  1
-  [25] .text.startup    PROGBITS        00000000000d4e0 00d4e0 000070 00  AX  0   0  1
-  [26] .text.unlikely    PROGBITS        00000000000d550 00d550 0000e0 00  AX  0   0  1
-  [27] .interp           PROGBITS        000000000000238 0238 00001c 00   A  0   0  1
-  [28] .comment          PROGBITS        000000000000000 02354 00001d 01  MS  0   0  1
-  [29] .note.GNU-stack   PROGBITS        000000000000000 02371 000000 00      0   0  1
-  [30] .eh_frame         PROGBITS        00000000000d904 00d904 000474 00   A  0   0  8
-```
+[[搞懂ELF从入门到遗忘#3.1.3 节头表（Section Header Table）]]
 
 ---
 
 ## 6. 节区类型
+
+[[搞懂ELF从入门到遗忘#3.2 一些关键的节]]
 
 ### 6.1 .text 节区
 
@@ -453,12 +404,16 @@ Section Headers:
 
 代码节区，存储可执行指令。
 
+[[搞懂ELF从入门到遗忘#3.2.2 .text]]
+
 ### 6.2 .data 和 .data.rel.ro 节区
 
 **类型**: SHT_PROGBITS
 **标志**: SHF_ALLOC | SHF_WRITE (或 SHF_ALLOC 用于 .data.rel.ro)
 
 已初始化数据节区。
+
+[[搞懂ELF从入门到遗忘#3.2.4 .data]]
 
 ### 6.3 .bss 节区
 
@@ -467,12 +422,16 @@ Section Headers:
 
 未初始化数据节区，不占用文件空间，运行时分配并初始化为零。
 
+[[搞懂ELF从入门到遗忘#3.2.3 .bss]]
+
 ### 6.4 .rodata 节区
 
 **类型**: SHT_PROGBITS
 **标志**: SHF_ALLOC
 
 只读数据节区。
+
+[[搞懂ELF从入门到遗忘#3.2.5 .rodata]]
 
 ### 6.5 .init 和 .fini 节区
 
@@ -502,6 +461,8 @@ Section Headers:
 
 动态链接符号表 (精简版符号表)。
 
+[[搞懂ELF从入门到遗忘#3.2.6 .symtab 和 .dynsym]]
+
 ### 6.9 .dynstr 节区
 
 **类型**: SHT_STRTAB
@@ -515,6 +476,8 @@ Section Headers:
 **标志**: 无 SHF_ALLOC
 
 完整符号表 (用于链接，不用于运行时)。
+
+[[搞懂ELF从入门到遗忘#3.2.6 .symtab 和 .dynsym]]
 
 ### 6.11 .strtab 节区
 
@@ -651,6 +614,8 @@ Symbol table '.dynsym' contains 706 entries:
      3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __overflow@GLIBC_2.2.5 (2)
      ...
 ```
+
+[[搞懂ELF从入门到遗忘#3.1.4 符号表（.symtab 节）]]
 
 ---
 
@@ -898,6 +863,8 @@ Dynamic section at offset 0x15eb48 contains 28 entries:
  0x000000000000001f (SYMBOLIC)      0x0
  ...
 ```
+
+[[ELF动态链接与PIC原理]]
 
 ---
 
@@ -1318,6 +1285,8 @@ readelf -h hello | grep Type
 # Type: DYN (Shared object file) - PIE
 # Type: EXEC (Executable file) - 非PIE
 ```
+
+[[ELF文件类型与PIE详解]]
 
 ### 12.8 CET (Control Flow Enforcement Technology)
 
@@ -2049,228 +2018,13 @@ BPF Core (Compile Once - Run Everywhere) 允许eBPF程序跨内核版本移植�
 - 依赖ELF节区中的类型信息
 
 ---
+## 17. 工具与命令
 
-## 17. 实例分析
-
-### 17.1 简单C程序
-
-```c
-// hello.c
-#include <stdio.h>
-
-const char* message = "Hello, ELF!";
-
-int main() {
-    printf("%s\n", message);
-    return 0;
-}
-```
-
-编译:
-```bash
-gcc -o hello hello.c
-```
-
-### 17.2 分析ELF结构
-
-```bash
-# 查看文件类型
-$ file hello
-hello: ELF 64-bit LSB executable, x86-64, ...
-
-# 查看ELF头
-$ readelf -h hello
-
-# 查看程序头
-$ readelf -l hello
-
-# 查看节区
-$ readelf -S hello
-
-# 查看符号
-$ readelf -s hello
-
-# 查看动态链接
-$ readelf -d hello
-```
-
-### 17.3 32位与64位对比
-
-| 特性 | 32位 | 64位 |
-|------|------|------|
-| ELF头大小 | 52字节 | 64字节 |
-| 程序头大小 | 32字节 | 56字节 |
-| 节区头大小 | 40字节 | 64字节 |
-| 地址宽度 | 32位 | 64位 |
-| 魔术数偏移 | 0x100 | 0x200 (典型) |
-
-### 11.4 创建和解析简单的ELF
-
-```c
-// 创建最简单的ELF (仅作示例)
-#include <stdio.h>
-#include <elf.h>
-
-int main() {
-    // ELF64头
-    Elf64_Ehdr ehdr = {
-        .e_ident = {
-            0x7F, 'E', 'L', 'F', // 魔数
-            ELFCLASS64,          // 64位
-            ELFDATA2LSB,         // 小端
-            EV_CURRENT,          // 版本
-            ELFOSABI_NONE        // ABI
-        },
-        .e_type = ET_EXEC,
-        .e_machine = EM_X86_64,
-        .e_version = EV_CURRENT,
-        .e_entry = 0x00400000,
-        .e_phoff = sizeof(Elf64_Ehdr),
-        .e_shoff = 0,
-        .e_flags = 0,
-        .e_ehsize = sizeof(Elf64_Ehdr),
-        .e_phentsize = sizeof(Elf64_Phdr),
-        .e_phnum = 0,
-        .e_shentsize = sizeof(Elf64_Shdr),
-        .e_shnum = 0,
-        .e_shstrndx = 0
-    };
-    
-    FILE *f = fopen("test.elf", "wb");
-    fwrite(&ehdr, sizeof(ehdr), 1, f);
-    fclose(f);
-    
-    return 0;
-}
-```
+详细请查看：[[binutils-toolchain-complete-guide]]
 
 ---
 
-## 18. 工具与命令
-
-### 18.1 readelf
-
-```bash
-# 查看ELF头
-readelf -h <file>
-
-# 查看程序头
-readelf -l <file>
-
-# 查看节区头
-readelf -S <file>
-
-# 查看符号表
-readelf -s <file>
-
-# 查看重定位
-readelf -r <file>
-
-# 查看动态段
-readelf -d <file>
-
-# 查看所有头信息
-readelf -a <file>
-
-# 解析动态链接
-readelf --dyn-syms <file>
-```
-
-### 18.2 objdump
-
-```bash
-# 反汇编
-objdump -d <file>
-
-# 查看节区内容
-objdump -s <file>
-
-# 查看文件头
-objdump -f <file>
-
-# 显示符号表
-objdump -t <file>
-
-# C++filt 符号解码
-echo "_Z4funcv" | c++filt
-```
-
-### 18.3 nm
-
-```bash
-# 查看所有符号
-nm <file>
-
-# 仅全局符号
-nm -g <file>
-
-# 仅动态符号
-nm -D <file>
-
-# 符号解码
-nm -C <file>
-
-# 按地址排序
-nm -n <file>
-```
-
-### 18.4 ldd
-
-```bash
-# 查看动态库依赖
-ldd <file>
-
-# 显示依赖关系树
-ldd -r <file>
-```
-
-### 18.5 patchelf
-
-```bash
-# 查看依赖
-patchelf --print-interp <file>
-patchelf --print-needed <file>
-patchelf --print-rpath <file>
-
-# 修改RPATH
-patchelf --set-rpath /new/path <file>
-
-# 添加依赖
-patchelf --add-needed libfoo.so <file>
-
-# 移除依赖
-patchelf --remove-needed libfoo.so <file>
-```
-
-### 18.6 strip
-
-```bash
-# 移除符号表
-strip <file>
-
-# 移除指定节区
-strip -R .comment <file>
-
-# 仅复制文件(移除所有本地符号)
-strip -s <file>
-```
-
-### 18.7 xxd / hexdump
-
-```bash
-# 十六进制查看
-xxd <file>
-
-# 只看头
-xxd -l 64 <file>
-
-# 小端反转显示
-xxd -e <file>
-```
-
----
-
-## 19. 参考文献
+## 18. 参考文献
 
 ### 官方规范
 

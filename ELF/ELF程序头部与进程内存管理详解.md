@@ -11,48 +11,7 @@
 
 ## 2. 程序头部 (Program Header)
 
-### 2.1 Elf64_Phdr 结构
-
-```c
-typedef struct {
-    Elf64_Word    p_type;    /* 段类型 */
-    Elf64_Word    p_flags;   /* 段标志 */
-    Elf64_Off     p_offset;  /* 文件中段的偏移 */
-    Elf64_Addr    p_vaddr;    /* 内存中的虚拟地址 */
-    Elf64_Addr    p_paddr;    /* 物理地址 (通常忽略) */
-    Elf64_Xword   p_filesz;  /* 文件中段的大小 */
-    Elf64_Xword   p_memsz;   /* 内存中段的大小 */
-    Elf64_Xword   p_align;   /* 对齐 */
-} Elf64_Phdr;
-```
-
-### 2.2 段类型 (p_type)
-
-| 类型值 | 名称 | 描述 |
-|--------|------|------|
-| PT_NULL | 0 | 未使用，忽略 |
-| PT_LOAD | 1 | 可加载段 |
-| PT_DYNAMIC | 2 | 动态链接信息 |
-| PT_INTERP | 3 | 解释器路径 |
-| PT_NOTE | 4 | 附加信息 |
-| PT_PHDR | 6 | 程序头部表自身 |
-| PT_TLS | 7 | 线程局部存储 |
-| PT_GNU_EH_FRAME | 0x6474e550 | GCC 异常处理帧 |
-| PT_GNU_STACK | 0x6474e551 | 堆栈标志 |
-| PT_GNU_RELRO | 0x6474e552 | 只读重定位 |
-| PT_GNU_PROPERTY | 0x6474e553 | GNU 属性 |
-
-### 2.3 段标志 (p_flags)
-
-| 标志值 | 名称 | 描述 |
-|--------|------|------|
-| PF_X (1) | 可执行 | 代码页可执行 |
-| PF_W (2) | 可写 | 数据页可写 |
-| PF_R (4) | 可读 | 数据页可读 |
-| PF_MASKOS | 0x0ff00000 | OS 特定 |
-| PF_MASKPROC | 0xf0000000 | 处理器特定 |
-
-### 2.4 p_filesz 与 p_memsz 的差异
+### 2.1 p_filesz 与 p_memsz 的差异
 
 差异主要来自于 **SHT_NOBITS** 类型的节区（如 .bss）：
 
@@ -66,7 +25,7 @@ $ readelf -S /bin/ls | grep -E "(NOBITS|Filesz|Memsz)"
 
 **结果**：`p_filesz < p_memsz`，差额就是 .bss 等节区的大小。
 
-### 2.5 示例：/bin/ls 的 LOAD 段
+### 2.2 示例：/bin/ls 的 LOAD 段
 
 ```bash
 $ readelf -l /bin/ls | grep LOAD

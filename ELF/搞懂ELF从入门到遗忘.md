@@ -291,6 +291,8 @@ readelf -x <name/of/section> <path/for/elf>
 # 以汇编打印二进制代码
 objdump -d -j <name/of/section> <path/for/elf>
 ```
+详细请查看：[[binutils-toolchain-complete-guide]]
+
 #  5\. ELF 在磁盘 Vs. ELF 加载到内存
 
 在 《完全剖析 - Linux虚拟内存空间管理》（https://cloud.tencent.com/developer/article/1835295）
