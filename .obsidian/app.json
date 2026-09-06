@@ -15,5 +15,6 @@
   },
   "autoPairMarkdown": false,
   "autoPairBrackets": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "alwaysUpdateLinks": true
 }
