@@ -380,3 +380,10 @@ Maven 会自动处理这些传递依赖。
 
 > [!tip]
 **Maven 依赖管理就是通过 POM 声明项目依赖，利用 Maven 坐标从仓库获取资源，并自动处理依赖传递；当某个传递依赖不需要时，可以使用 exclusions 主动排除。**
+
+## 相关笔记
+
+- [Maven 基础与核心模型](<01-Maven基础与核心模型.md>)：回顾项目坐标、POM 和 Maven 的基本模型。
+- [JUnit 单元测试](<05-JUnit单元测试.md>)：查看如何把测试依赖接入 Maven 生命周期。
+- [Starter 与内嵌 Tomcat](<../Spring/SpringBoot/基础知识/03-Starter与内嵌Tomcat.md>)：理解 Starter 如何利用依赖传递组织 Web 运行环境。
+- [MyBatis 快速入门](<../数据库/MyBatis/02-MyBatis快速入门.md>)：查看 Maven 依赖在数据库项目中的实际使用。

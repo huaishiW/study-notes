@@ -288,7 +288,7 @@ IOC容器中没有对应Bean
 例如：
 
 ```yaml
-name: itheima
+name: huaishi
 ```
 
 配置类：
@@ -300,7 +300,7 @@ public class HeaderConfig {
     @Bean
     @ConditionalOnProperty(
         name = "name",
-        havingValue = "itheima"
+        havingValue = "huaishi"
     )
     public HeaderParser headerParser() {
         return new HeaderParser();
@@ -317,7 +317,7 @@ name
 值必须满足：
 
 ```text
-itheima
+huaishi
 ```
 
 条件满足时，`HeaderParser` 才会注册到 IOC 容器。
@@ -332,7 +332,7 @@ itheima
 @Bean
 @ConditionalOnProperty(
     name = "name",
-    havingValue = "itheima2"
+    havingValue = "huaishi2"
 )
 public HeaderParser headerParser() {
     return new HeaderParser();
@@ -342,15 +342,15 @@ public HeaderParser headerParser() {
 但是配置文件仍然只有：
 
 ```yaml
-name: itheima
+name: huaishi
 ```
 
 那么：
 
 ```text
-itheima
+huaishi
 ≠
-itheima2
+huaishi2
 ```
 
 条件不成立。
@@ -366,7 +366,7 @@ HeaderParser
 材料中的测试结果也说明，当配置文件不存在满足条件的：
 
 ```text
-name: itheima2
+name: huaishi2
 ```
 
 时，IOC 容器中就不存在 `HeaderParser` 对象。

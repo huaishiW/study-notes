@@ -59,7 +59,7 @@ Map<String, Object> claims = new HashMap<>();
 
 ```java
 claims.put("id", 10);
-claims.put("username", "itheima");
+claims.put("username", "huaishi");
 ```
 
 这里的：
@@ -88,7 +88,7 @@ public void testGenJwt() {
     Map<String, Object> claims = new HashMap<>();
 
     claims.put("id", 10);
-    claims.put("username", "itheima");
+    claims.put("username", "huaishi");
 
     String jwt = Jwts.builder()
             .signWith(SignatureAlgorithm.HS256, "aXRjYXN0")
@@ -177,7 +177,7 @@ aXRjYXN0
 
 ```java
 claims.put("id", 10);
-claims.put("username", "itheima");
+claims.put("username", "huaishi");
 ```
 
 最终这些信息会进入 JWT 的 Payload。
@@ -353,7 +353,7 @@ JWT 解析成功后：
 例如材料中的解析结果：
 
 ```text
-{id=10, username=itheima, exp=1701909015}
+{id=10, username=huaishi, exp=1701909015}
 ```
 
 其中包含：

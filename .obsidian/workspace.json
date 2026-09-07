@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "024c668b53aaa25f",
+        "id": "d4ec00642bde2a4b",
         "type": "tabs",
         "children": [
           {
-            "id": "1feb1cc6cc856725",
+            "id": "6e1557c17ed7351a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git的使用/git常用命令.md",
+                "file": "后端/Spring/SpringBoot/基础知识/02-SpringBoot快速入门.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git常用命令"
+              "title": "02-SpringBoot快速入门"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "itheima",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "git的使用/git常用命令.md",
+                "file": "后端/Spring/SpringBoot/基础知识/02-SpringBoot快速入门.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "后端/Spring-Boot/Spring-Boot原理.md",
+                "file": "后端/Maven知识导航.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Spring-Boot原理 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -131,12 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "后端/Spring-Boot/Spring-Boot原理.md",
+                "file": "后端/Maven知识导航.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Spring-Boot原理 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -204,55 +204,54 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1feb1cc6cc856725",
+  "active": "c23df7bd5db871f0",
   "lastOpenFiles": [
-    "后端/Spring/Spring核心/05-多Bean依赖注入冲突.md",
-    "后端/数据库/MyBatis/06-MyBatis进阶.md",
-    "后端/Spring/SpringBoot/Starter/自定义SpringBootStarter.md",
-    "后端/Spring/SpringBoot/自动配置/05-Conditional条件装配.md",
+    "编译原理/01-编译程序概述.md",
+    "编译原理/attachments/Pasted image 20260907180356.png",
+    "编译原理/attachments/01-编译程序概述-20260907175911.png",
+    "编译原理/attachments/Pasted image 20260907180215.png",
+    "编译原理/attachments/01-编译程序概述-20260907175051.png",
+    "编译原理/attachments/Pasted image 20260907180321.png",
+    "编译原理/attachments",
+    "操作系统/01-引论.md",
+    "操作系统/00-操作系统基础知识库.md",
+    "数据库原理/07-关系数据理论.md",
+    "数据库原理/06-并发控制.md",
+    "数据库原理/05-数据库恢复技术.md",
+    "数据库原理/04-关系查询处理和查询优化.md",
+    "数据库原理/03-关系数据库标准语言SQL.md",
+    "数据库原理/02-关系数据库.md",
+    "数据库原理/01-绪论.md",
+    "软件设计基础原理/01-软件设计基础.md",
+    "软件测试与质量保证/01-测试综述.md",
+    "操作系统/09-操作系统接口.md",
+    "操作系统/08-磁盘存储器管理.md",
+    "操作系统/07-文件管理.md",
+    "操作系统/06-输入输出系统.md",
+    "操作系统/05-虚拟存储器.md",
+    "操作系统/04-存储器管理.md",
+    "操作系统/03-处理机调度与死锁.md",
+    "操作系统/02-进程的描述与控制.md",
+    "后端/Maven/03-Maven依赖管理.md",
+    "后端/Spring/00-Spring知识导航.md",
+    "后端/数据库/MyBatis/03-数据库连接池.md",
+    "后端/工程基础/00-工程基础知识导航.md",
+    "后端/JavaWeb基础/00-JavaWeb基础知识导航.md",
     "后端/Spring/SpringBoot/Starter",
-    "后端/Spring/SpringBoot/自动配置/04-SpringBoot自动配置原理.md",
-    "后端/Spring/SpringBoot/自动配置/03-Import与ImportSelector.md",
-    "后端/Spring/SpringBoot/自动配置/02-SpringBootApplication核心注解.md",
-    "后端/Spring/SpringBoot/自动配置/01-SpringBoot自动配置概述.md",
-    "后端/Spring/Spring核心/03-组件扫描.md",
-    "后端/Spring/Spring核心/02-Bean的声明.md",
-    "后端/Spring/Spring核心/06-Bean作用域与创建时机.md",
-    "后端/Spring/SpringBoot/配置/02-SpringBoot配置优先级.md",
-    "后端/Spring/SpringBoot/基础知识/01-SpringBoot概述.md",
-    "后端/Spring/SpringBoot/配置/01-SpringBoot配置文件.md",
     "后端/Spring/SpringBoot/配置",
-    "后端/Spring/SpringBoot/starter/自定义SpringBootStarter.md",
     "后端/Spring/SpringBoot/自动配置",
     "后端/Spring/SpringBoot/starter",
-    "后端/工程基础/登录认证/06-登录校验实现.md",
-    "后端/Spring/SpringMVC/Interceptor/Interceptor执行流程.md",
-    "后端/Spring/SpringMVC/Interceptor/Interceptor拦截器.md",
-    "后端/JavaWeb基础/Filter/Fliter执行流程与过滤器链.md",
-    "后端/JavaWeb基础/Filter/Filter过滤器.md",
-    "后端/工程基础/登录认证/05-JWT登录认证.md",
-    "后端/工程基础/登录认证/04-JWT生成与校验.md",
-    "后端/工程基础/登录认证/03-JWT令牌.md",
-    "后端/工程基础/登录认证/02-用户登录功能概要.md",
-    "后端/JavaWeb基础/会话技术/04-Token令牌认证.md",
-    "后端/JavaWeb基础/会话技术/03-Session会话跟踪.md",
     "后端/工程基础/登录认证/未命名",
     "后端/工程基础/登录认证",
     "后端/Spring/SpringMVC/Interceptor",
     "后端/JavaWeb基础/Filter",
     "后端/JavaWeb基础/会话技术",
-    "后端/JavaWeb基础",
     "软件设计基础原理/attachments/1.软件设计基础-20260905134430.png",
     "软件设计基础原理/attachments/Pasted image 20260905132745.png",
     "软件设计基础原理/attachments/1.软件设计基础-20260905132648.png",
     "软件测试与质量保证/attachments/1.测试综述-20260905122318.png",
     "软件测试与质量保证/attachments/Pasted image 20260905122156.png",
-    "软件测试与质量保证/attachments/Pasted image 20260905122114.png",
-    "后端/JDBC/attachments/JDBC基础-20260723202352.png",
     "数据库原理/数据库系统的三级模式结构.canvas",
-    "数据库原理/attachments/5.数据库恢复技术-20260709122055.png",
-    "数据库原理/attachments/4.关系查询处理和查询优化-20260703232659.png",
-    "未命名.canvas",
-    "操作系统/attachments/Pasted image 20260418193022.png"
+    "未命名.canvas"
   ]
 }

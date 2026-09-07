@@ -414,3 +414,11 @@ private UserDao userDao;
 > [!tip] 一句话总结
 > 
 > `IOC 将对象的创建和管理交给 Spring 容器，DI 再由容器把程序所依赖的对象提供给使用者，从而降低类与具体实现之间的耦合。`
+
+## 相关笔记
+
+- [Bean 的声明](<02-Bean的声明.md>)：继续学习如何把对象注册为 Bean。
+- [组件扫描](<03-组件扫描.md>)：理解组件注解声明的 Bean 如何被 Spring 发现。
+- [Autowired 依赖注入](<04-Autowired依赖注入.md>)：深入学习容器如何将依赖注入使用者。
+- [Bean 作用域与创建时机](<06-Bean作用域与创建时机.md>)：补充 Bean 在容器中的作用范围和创建时机。
+- [Spring Boot 自动配置概述](<../SpringBoot/自动配置/01-SpringBoot自动配置概述.md>)：了解自动配置的 Bean 最终仍由 IOC 容器管理。

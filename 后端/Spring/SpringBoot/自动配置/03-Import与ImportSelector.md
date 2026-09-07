@@ -5,7 +5,7 @@ Spring Boot 默认会通过组件扫描发现启动类所在包及其子包中�
 例如：
 
 ```text
-com.itheima
+com.huaishi
 ├── Application.java
 ├── controller
 └── service
@@ -14,13 +14,13 @@ com.itheima
 如果启动类位于：
 
 ```text
-com.itheima
+com.huaishi
 ```
 
 那么 Spring Boot 默认能够扫描：
 
 ```text
-com.itheima
+com.huaishi
 ```
 
 及其子包。
@@ -40,7 +40,7 @@ com.example
 并不是：
 
 ```text
-com.itheima
+com.huaishi
 ```
 
 的子包，因此默认组件扫描无法发现其中的组件。
@@ -72,7 +72,7 @@ Spring 提供的一个重要方式就是：
 ```java
 @SpringBootApplication
 @ComponentScan({
-        "com.itheima",
+        "com.huaishi",
         "com.example"
 })
 public class Application {
@@ -86,7 +86,7 @@ public class Application {
 这样确实可以让 Spring 同时扫描：
 
 ```text
-com.itheima
+com.huaishi
 com.example
 ```
 

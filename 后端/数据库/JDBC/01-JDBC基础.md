@@ -452,7 +452,7 @@ user.setName(rs.getString("name"));
 
 因此实际项目中通常会使用：
 
-[[03-数据库连接池]]
+[03-数据库连接池](../MyBatis/03-数据库连接池.md)
 
 来统一管理和复用数据库连接。
 
@@ -615,3 +615,9 @@ JDBC 是 Java 定义的一套数据库访问规范。它规定了 Java 程序应
 
 > [!tip] 一句话总结
 >JDBC 是 Java 操作关系型数据库的一套标准 API。Java 定义 JDBC 规范，数据库厂商通过数据库驱动实现这套规范，而 MyBatis 等持久层框架则在 JDBC 基础上进一步封装数据库访问过程，从而减少重复代码并提高开发效率。
+
+## 相关笔记
+
+- [数据库连接池](<../MyBatis/03-数据库连接池.md>)：了解 Connection 如何通过 DataSource 被复用和管理。
+- [MyBatis 基础](<../MyBatis/01-MyBatis基础.md>)：理解 MyBatis 如何在 JDBC 之上封装数据库访问。
+- [MyBatis CRUD](<../MyBatis/04-MyBatis CRUD.md>)：对照 JDBC 参数绑定与 MyBatis 的 `#{}`、`${}`。

@@ -178,7 +178,7 @@ com.huaishi.mapper
 例如：
 
 ```text
-com.itheima
+com.huaishi
 └── Application.java
 ```
 
@@ -197,7 +197,7 @@ com.example
 并不是：
 
 ```text
-com.itheima
+com.huaishi
 ```
 
 的子包，因此默认组件扫描无法发现其中的组件。
@@ -210,7 +210,7 @@ com.itheima
 
 ```java
 @ComponentScan({
-        "com.itheima",
+        "com.huaishi",
         "com.example"
 })
 ```
@@ -315,19 +315,6 @@ AutoConfigurationImportSelector
 
 > `@EnableAutoConfiguration` 会继续借助 `@Import` 和 `ImportSelector` 去完成自动配置类的导入。
 
-至于：
-
-- `@Import` 可以导入哪些内容；
-    
-- `ImportSelector` 是什么；
-    
-- `selectImports()` 如何工作；
-    
-- `AutoConfigurationImportSelector` 如何找到自动配置类；
-    
-
-这些将在后续笔记中单独展开。
-
 ---
 
 # 8. 三个核心注解的职责划分
@@ -393,10 +380,6 @@ Spring Boot 自动配置的源码分析通常从：
 ```java
 @EnableAutoConfiguration
 ```
-
-因为当前材料明确指出：
-
-> `@EnableAutoConfiguration` 才是自动配置的核心。
 
 所以后续分析可以形成这样的入口：
 

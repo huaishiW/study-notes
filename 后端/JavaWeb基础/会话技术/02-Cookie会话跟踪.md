@@ -51,7 +51,7 @@ Cookie 是一种：
 例如：
 
 ```text
-login_username = itheima
+login_username = huaishi
 ```
 
 以后浏览器访问其他接口时，就可以继续携带这个值。
@@ -102,7 +102,7 @@ Set-Cookie
 例如服务端设置：
 
 ```text
-login_username = itheima
+login_username = huaishi
 ```
 
 服务器响应中会携带对应的：
@@ -144,7 +144,7 @@ Cookie
 public Result cookie1(HttpServletResponse response) {
 
     response.addCookie(
-            new Cookie("login_username", "itheima")
+            new Cookie("login_username", "huaishi")
     );
 
     return Result.success();
@@ -154,7 +154,7 @@ public Result cookie1(HttpServletResponse response) {
 这里首先创建：
 
 ```java
-new Cookie("login_username", "itheima")
+new Cookie("login_username", "huaishi")
 ```
 
 然后通过：
@@ -231,7 +231,7 @@ cookie.getValue()
 
 ```java
 response.addCookie(
-        new Cookie("login_username", "itheima")
+        new Cookie("login_username", "huaishi")
 );
 ```
 
